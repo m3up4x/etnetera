@@ -13,7 +13,7 @@ class ListViewAdapter(val myContext: Context,val layoutResID:Int,val SportRecord
         val view: View = layoutInflater.inflate(layoutResID,null)
         val textviewName = view.findViewById<TextView>(R.id.TextViewNameLVI)
         val sportRecord = SportRecordList[position]
-        textviewName.text = sportRecord.name
+        textviewName.text = sportRecord.getName()
         return view;
     }
 }

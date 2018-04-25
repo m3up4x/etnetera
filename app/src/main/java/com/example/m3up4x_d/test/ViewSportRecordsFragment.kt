@@ -14,7 +14,7 @@ class ViewSportRecordsFragment : android.support.v4.app.Fragment,View.OnClickLis
     constructor() : super()
 
     lateinit var dbReference: DatabaseReference
-    lateinit var sportRecordList: MutableList<SportRecordFirebase>
+    lateinit var sportRecordList: MutableList<SportRecord>
     lateinit var listview: ListView
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
@@ -44,7 +44,7 @@ class ViewSportRecordsFragment : android.support.v4.app.Fragment,View.OnClickLis
                         if (p0!!.exists()){
                             sportRecordList.clear()
                             for (h in p0.children){
-                                sportRecordList.add(h.getValue(SportRecordFirebase::class.java)!!)
+                                sportRecordList.add(h.getValue(SportRecord::class.java)!!)
                             }
                         }
                         listview.adapter = ListViewAdapter(activity.applicationContext,R.layout.list_view_item,sportRecordList)
