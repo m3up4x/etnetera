@@ -45,7 +45,7 @@ class SportRecord (val _sportRecordSQLite: SportRecordSQLite = SportRecordSQLite
         }
     }
     fun getSeconds(): Int {
-        if ((timebool)) {
+        if (timebool) {
             return sportRecordFirebase.seconds
         }
         else{

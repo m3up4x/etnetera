@@ -55,7 +55,7 @@ class ImputSportRecordFragment : android.support.v4.app.Fragment, View.OnClickLi
 
 
                val objectid = dbReference!!.push().key
-                val sportRecordFirebase = SportRecordFirebase(objectid,editTextName.text.toString(),editTextLocation.text.toString(),editTextHours.text.toString().toInt(),editTextMinutes.text.toString().toInt(),editTextSeconds.text.toString().toInt())
+               val sportRecordFirebase = SportRecordFirebase(objectid,editTextName.text.toString(),editTextLocation.text.toString(),editTextHours.text.toString().toInt(),editTextMinutes.text.toString().toInt(),editTextSeconds.text.toString().toInt())
                val sportRecord = SportRecord(SportRecordSQLite(),sportRecordFirebase)
                dbReference!!.child(objectid).setValue(sportRecord).addOnCompleteListener {
                     Toast.makeText(activity.applicationContext,"data saved",Toast.LENGTH_SHORT).show()
