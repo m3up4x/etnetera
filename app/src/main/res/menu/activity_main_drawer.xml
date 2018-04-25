@@ -5,17 +5,18 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_imput_sport_record"
+
+            android:title="@string/sportovni_zaznam" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
-        <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_view_sport_records"
+
+            android:title="Zobraz Záznamy" />
+    </group>
+
+        <!--
+
+
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
@@ -34,5 +35,5 @@
                 android:title="Send" />
         </menu>
     </item>
-
+-->
 </menu>
